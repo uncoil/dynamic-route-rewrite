@@ -5,3 +5,26 @@ The rewrites are setup to map `/a-path?fid=an-id` to the destination `/an-id/a-p
 Notes:
 - When using `next/link` component the dynamic route will load successfully, but if the page is refreshed it will 404.
 - When using `a` tag without next/link, the page will 404 immediately.
+
+
+I tried using only a specific rewrite targeting the orders route directly: `/orders/1234asdf?fid=a-funnel` still 404s
+```
+module.exports = {
+  reactStrictMode: true,
+  async rewrites() {
+    return [
+      {
+        source: '/orders/:orderId',
+        has: [
+          {
+            type: 'query',
+            key: 'fid',
+            value: `(?<fid>.*)`,
+          }
+        ],
+        destination: `/:fid/orders/:orderId`,
+      }
+    ]
+  }
+};
+```

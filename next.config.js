@@ -1,16 +1,23 @@
+const hasQuery={
+  type: 'query',
+  key: 'fid',
+  value: `(?<fid>.*)`,
+}
+
 module.exports = {
   reactStrictMode: true,
   async rewrites() {
     return [
       {
-        source: '/:path*',
-        has: [{
-          type: 'query',
-          key: 'fid',
-          value: `(?<fid>.*)`,
-        }],
-        destination: `/:fid/:path*`,
+        source: '/orders/:orderId',
+        has: [hasQuery],
+        destination: `/:fid/orders/:orderId`,
       },
+      // {
+      //   source: '/:path*',
+      //   has: [hasQuery],
+      //   destination: `/:fid/:path*`,
+      // },
     ]
   }
 }

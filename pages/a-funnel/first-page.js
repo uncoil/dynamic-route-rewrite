@@ -17,6 +17,7 @@ export default function Home() {
         </h1>
 
         <Link href="/orders/1234asdf?fid=a-funnel"><a>Order Page</a></Link>
+        <a href="/orders/1234asdf?fid=a-funnel">Order Page (regular link)</a>
       </main>
     </div>
   )

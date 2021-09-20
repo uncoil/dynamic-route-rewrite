@@ -16,8 +16,13 @@ export default function Home() {
           First Page
         </h1>
 
-        <Link href="/orders/1234asdf?fid=a-funnel"><a>Order Page</a></Link>
-        <a href="/orders/1234asdf?fid=a-funnel">Order Page (regular link)</a>
+        <h2>Orders page usees dynamic segment has a directory</h2>
+        <Link href="/orders/1234asdf?fid=a-funnel"><a>Order Page (will 404 after refresh of the page)</a></Link>
+        <a href="/orders/1234asdf?fid=a-funnel">Order Page (regular link - will 404 immediately)</a>
+        <br />
+        <h2>Another page uses dynamic segment as js file</h2>
+        <Link href="/another/1234asdf?fid=a-funnel"><a>Another Page (will 404 after refresh of the page)</a></Link>
+        <a href="/another/1234asdf?fid=a-funnel">Another Page (regular link - will 404 immediately)</a>
       </main>
     </div>
   )

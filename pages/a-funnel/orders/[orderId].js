@@ -1,8 +1,9 @@
 import Head from 'next/head'
-import Link from 'next/link'
-import styles from '../styles/Home.module.css'
+import { useRouter } from 'next/router'
+import styles from '../../../styles/Home.module.css'
 
 export default function Home() {
+  const { query } = useRouter();
   return (
     <div className={styles.container}>
       <Head>
@@ -13,10 +14,10 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Index
+          Dynamic Order Page
         </h1>
 
-        <Link href="/first-page?fid=a-funnel"><a>First Page</a></Link>
+        <p>Order ID: {query.orderId}</p>
       </main>
     </div>
   )

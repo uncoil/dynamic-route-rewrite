@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import styles from '../styles/Home.module.css'
+import styles from '../../styles/Home.module.css'
 
 export default function Home() {
   return (
@@ -13,10 +13,10 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Index
+          First Page
         </h1>
 
-        <Link href="/first-page?fid=a-funnel"><a>First Page</a></Link>
+        <Link href="/orders/1234asdf?fid=a-funnel"><a>Order Page</a></Link>
       </main>
     </div>
   )

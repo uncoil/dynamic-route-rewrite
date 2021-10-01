@@ -1,8 +1,8 @@
-const hasQuery={
+const hasQuery = {
   type: 'query',
   key: 'fid',
   value: `(?<fid>.*)`,
-}
+};
 
 module.exports = {
   reactStrictMode: true,
@@ -18,6 +18,6 @@ module.exports = {
       //   has: [hasQuery],
       //   destination: `/:fid/:path*`,
       // },
-    ]
-  }
-}
+    ];
+  },
+};

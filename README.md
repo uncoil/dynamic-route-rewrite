@@ -1,3 +1,7 @@
+Vercel support has pushed a fix that resolves this issue! Nice work folks!
+
+---
+
 This repo is setup to reproduce the issue I'm seeing with Next.js deployed on Vercel. When next.config.js contains `rewrites`, the rewrites 404 when referring to paths with dynamic segments.
 
 The rewrites are setup to map `/a-path?fid=an-id` to the destination `/an-id/a-path`. When the path contains a dynamic segment (see `/pages/orders/[orderId]/index.js`), the vercel deployed version 404s for these routes. Click through the pages from root to see it happen.
